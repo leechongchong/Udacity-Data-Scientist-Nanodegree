@@ -30,7 +30,7 @@ This project is sponsored by Figure Eight with the goal to build a ETL & ML pipe
     - To run ML pipeline that trains classifier and saves
         `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
         
-Note:  Skip the above and run the following steps directly if DisasterResponse.db and claasifier.pkl already exist.
+Note:  Skip the above and run the following steps directly if DisasterResponse.db and classifier.pkl already exist.
 
 2. Go to `app` directory: `cd app`
 
@@ -38,7 +38,7 @@ Note:  Skip the above and run the following steps directly if DisasterResponse.d
 
 4. Go to http://0.0.0.0:3001/
 
-## App Demo
+## Output
 
 ### Main Page 
 <img width="1888" alt="Screen Shot 2022-10-18 at 3 29 38 AM" src="https://user-images.githubusercontent.com/23645903/196406792-fc7445fb-00d0-49be-b660-ab5cde35c7b7.png">
