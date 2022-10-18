@@ -38,11 +38,11 @@ Note:  Skip the above and run the following steps directly if DisasterResponse.d
 
 4. Go to http://0.0.0.0:3001/
 
-## Results
+## App Demo
 
-### Landing Page 
+### Main Page 
 <img width="1888" alt="Screen Shot 2022-10-18 at 3 29 38 AM" src="https://user-images.githubusercontent.com/23645903/196406792-fc7445fb-00d0-49be-b660-ab5cde35c7b7.png">
-### Sample Output
+### Classification Result
 <img width="1888" alt="Screen Shot 2022-10-18 at 3 16 56 PM" src="https://user-images.githubusercontent.com/23645903/196555546-b568b18f-b8ec-4da2-80a7-f9f84b28ff8a.png">
 
 
