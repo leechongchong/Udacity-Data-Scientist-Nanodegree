@@ -1,3 +1,4 @@
+# Import libraries
 import sys
 import pandas as pd
 from sqlalchemy import create_engine
@@ -17,7 +18,7 @@ from sklearn.metrics import classification_report
 
 import pickle
 
-
+# load data
 def load_data(database_filepath):
     engine = create_engine('sqlite:///' + database_filepath)
     df = pd.read_sql('DisasterResponse', engine)
@@ -27,7 +28,7 @@ def load_data(database_filepath):
     return X,y,category_names
 
 
-
+# tokenizing the text data
 def tokenize(text):
     tokens = word_tokenize(text)
     lemmatizer = WordNetLemmatizer()
@@ -38,14 +39,15 @@ def tokenize(text):
         clean_tokens.append(clean_tok)
     return clean_tokens
 
-
+# build a machine learning pipeline
 def build_model():
+    # set up pipeline
     pipeline = Pipeline([
     ('vect', CountVectorizer(tokenizer=tokenize)),
     ('tfidf', TfidfTransformer()),
     ('clf', MultiOutputClassifier(RandomForestClassifier()))
 ])
-    
+    # fine tune parameters 
     parameters = {
     'clf__estimator__n_estimators' : [5, 10]
     }
@@ -54,14 +56,14 @@ def build_model():
     
     return cv
 
-
+# Evaluate the model: show the accuracy, precision, and recall of the tuned model.
 def evaluate_model(model, X_test, Y_test, category_names):
     
     y_pred = model.predict(X_test)
     for index, column in enumerate(Y_test):
         print(column, classification_report(Y_test[column], y_pred[:, index]))
 
-
+# save and export the model as a pickle file
 def save_model(model, model_filepath):
     pickle.dump(model, open(model_filepath, 'wb'))
 
