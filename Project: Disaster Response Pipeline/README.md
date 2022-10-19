@@ -1,5 +1,5 @@
 ## Project Summary
-This project is sponsored by Figure Eight with the goal to build a ETL & ML pipeline to classify emergency messages and establish a web app where users such as emergency workers can input a new message and get classification results in several categories.
+This project is sponsored by Figure Eight with the goal to build a ETL & ML pipeline to classify emergency messages and establish a web app where users such as disaster response agent can input a new message and get classification results in several categories.
 
 ## File Descriptions
 
