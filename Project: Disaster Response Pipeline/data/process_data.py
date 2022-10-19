@@ -13,27 +13,27 @@ def load_data(messages_filepath, categories_filepath):
 
 
 def clean_data(df):
-    # Split categories into separate category columns. 
+    # Split categories into separate category columns 
     categories = df.categories.str.split(';',expand=True)     
     row = categories.iloc[0]  
     category_colnames = [i[:-2] for i in row]
     categories.columns = category_colnames  
     
-    # Convert category values to just numbers 0 or 1.
+    # Convert category values to just numbers 0 or 1
     for column in categories:
         categories[column] = categories[column].str[-1]
         categories[column] = categories[column].astype(int)
     categories['related'].replace(2, 1, inplace=True) 
     
-    # Replace categories column in df with new category columns.¶
+    # Replace categories column in df with new category columns
     df.drop('categories', axis = 1, inplace=True)
     
-    # Remove duplicates.
+    # Remove duplicates
     df = pd.concat([df, categories], axis = 1)
     df.drop_duplicates(inplace=True)
     return df
 
-# Save the clean dataset into an sqlite database.¶
+# Save the clean dataset into an sqlite database
 def save_data(df, database_filename):
     engine = create_engine('sqlite:///DisasterResponse.db')
     df.to_sql('DisasterResponse', engine, index=False)
