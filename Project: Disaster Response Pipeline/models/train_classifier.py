@@ -20,6 +20,17 @@ import pickle
 
 # load data
 def load_data(database_filepath):
+    """
+    Loads data from SQLite database.
+    
+    Parameters:
+    database_filepath: filepath to the database
+    
+    Returns:
+    X: features
+    y: target
+    category_names: categorical name for labeling
+    """
     engine = create_engine('sqlite:///' + database_filepath)
     df = pd.read_sql('DisasterResponse', engine)
     X = df['message']
@@ -30,6 +41,12 @@ def load_data(database_filepath):
 
 # tokenizing the text data
 def tokenize(text):
+     '''
+    Paraneters: messages for tokenization.
+    Return:
+        clean_tokens: output upon tokenization.
+    '''
+        
     tokens = word_tokenize(text)
     lemmatizer = WordNetLemmatizer()
     
@@ -41,6 +58,13 @@ def tokenize(text):
 
 # build a machine learning pipeline
 def build_model():
+    """
+    building message classifierand tuning model using GridSearchCV.
+    
+    Returns:
+    cv: Classifier 
+    """  
+        
     # set up pipeline
     pipeline = Pipeline([
     ('vect', CountVectorizer(tokenizer=tokenize)),
@@ -58,6 +82,17 @@ def build_model():
 
 # Evaluate the model: show the accuracy, precision, and recall of the tuned model.
 def evaluate_model(model, X_test, Y_test, category_names):
+    """
+    Evaluates model performance and generate corresponding report. 
+    
+    Parameters:
+    model: classifier
+    X_test: test messages
+    Y_test: categories/labels for test messages
+    
+    Returns:
+    classification report for each column
+    """
     
     y_pred = model.predict(X_test)
     for index, column in enumerate(Y_test):
@@ -65,6 +100,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
 
 # save and export the model as a pickle file
 def save_model(model, model_filepath):
+    """ Exports the final model as a pickle file."""
     pickle.dump(model, open(model_filepath, 'wb'))
 
 
