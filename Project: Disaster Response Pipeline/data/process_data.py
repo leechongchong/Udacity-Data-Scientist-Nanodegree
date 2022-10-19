@@ -1,9 +1,10 @@
+# import libraries
 import sys
 import numpy as np
 import pandas as pd
 from sqlalchemy import create_engine
 
-
+# load and merge datasets
 def load_data(messages_filepath, categories_filepath):
     messages = pd.read_csv(messages_filepath)
     categories = pd.read_csv(categories_filepath)
@@ -12,21 +13,27 @@ def load_data(messages_filepath, categories_filepath):
 
 
 def clean_data(df):
-    categories = df.categories.str.split(';',expand=True)
-    row = categories.iloc[0]
+    # Split categories into separate category columns. 
+    categories = df.categories.str.split(';',expand=True)     
+    row = categories.iloc[0]  
     category_colnames = [i[:-2] for i in row]
-    categories.columns = category_colnames
+    categories.columns = category_colnames  
     
+    # Convert category values to just numbers 0 or 1.
     for column in categories:
         categories[column] = categories[column].str[-1]
         categories[column] = categories[column].astype(int)
     categories['related'].replace(2, 1, inplace=True) 
+    
+    # Replace categories column in df with new category columns.¶
     df.drop('categories', axis = 1, inplace=True)
+    
+    # Remove duplicates.
     df = pd.concat([df, categories], axis = 1)
     df.drop_duplicates(inplace=True)
     return df
 
-
+# Save the clean dataset into an sqlite database.¶
 def save_data(df, database_filename):
     engine = create_engine('sqlite:///DisasterResponse.db')
     df.to_sql('DisasterResponse', engine, index=False)
