@@ -1,3 +1,4 @@
+# Import libraries
 import json
 import plotly
 import pandas as pd
@@ -11,9 +12,10 @@ from plotly.graph_objs import Bar
 from sklearn.externals import joblib
 from sqlalchemy import create_engine
 
-
+# set up python flask app
 app = Flask(__name__)
 
+# process the input message via text tokenization/lemmatization
 def tokenize(text):
     tokens = word_tokenize(text)
     lemmatizer = WordNetLemmatizer()
@@ -39,23 +41,21 @@ model = joblib.load("../models/classifier.pkl")
 def index():
     
     # extract data needed for visuals
-    # TODO: Below is an example - modify to extract data for your own visuals
-
+    
+    ## distribution of message genres
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
 
-    # Show distribution of different category
+    ## distribution of message categories
     category_counts = (df.iloc[:,4:] != 0).sum().values
     category_names = df.iloc[:,4:].columns
 
-    # extract data exclude related
+    ## top message categories
     categories = df.iloc[:,4:]
     categories_mean = categories.mean().sort_values(ascending=False)[1:11]
     categories_names = list(categories_mean.index)
     
     # create visuals
-    # TODO: Below is an example - modify to create your own visuals
-    
     ## 
     graphs = [
         {
