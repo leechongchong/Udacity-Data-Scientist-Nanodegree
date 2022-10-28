@@ -45,7 +45,7 @@ is a free software machine learning library for the Python programming language.
 
 ## Results Summary
 
-The main results & insights of the analysis can be found at the Medium Blog post available here. 
+The main results & insights of the analysis can be found at the Medium Blog post available here: https://medium.com/@taylorli1993/projecting-customer-lifetime-value-clv-for-a-mobile-game-company-59c1365017c3
 
 
 ## Acknowledgement 
