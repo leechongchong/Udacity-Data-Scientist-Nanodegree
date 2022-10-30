@@ -1,4 +1,4 @@
-# Projecting Customer Lifetime Value (CLV) for a Mobile Game Company
+# Projecting Customer Lifetime Value for a Mobile Game Company
 ## Project Motivation
 
 It is estimated that by 2021, the global game industry is expected to exceed 174 billion US dollars. Among them, the mobile game industry accounts for 50% of the global game market. In 2019 alone, approximately 2.4 billion people worldwide were playing mobile games. According to 2019 statistics, games are the third most popular app category, and together with social networking apps, online shopping apps account for 90% of smartphone time spent. In addition, 73% of total app revenue comes from games. Regionally, Asia-Pacific is the largest mobile game market, accounting for 50% of the total ($31.1 billion), followed by North America with about 25% ($15.9 billion). The mobile game industry can be described as the most promising industry under the globalization pattern.
