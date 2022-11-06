@@ -27,11 +27,15 @@ Feature Engineering.ipynb \
 
 
 Machine Learning Algorithms.ipynb \
-
+Decision Tree.pdf \
+feature importance plot.png \
 
 
 
 ### Libraries
+numpy \
+offers comprehensive mathematical functions, random number generators, linear algebra routines, Fourier transforms, and more.
+
 pandas \
 is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language.
 
