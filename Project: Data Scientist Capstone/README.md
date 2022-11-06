@@ -7,6 +7,29 @@ This project aims to explore basic applications of machine learning in credit ca
 ## Files & Libraries Description
 
 ### Files
+Credit Card Payment Fraud.xlsx \
+
+Credit Card Payment Fraud Clean.xlsx \
+
+Credit Card Payment Fraud Features.xlsx \
+
+
+
+DQR.ipynb \
+
+DQR.xlsx \
+
+
+Data Cleaning.ipynb \
+
+
+Feature Engineering.ipynb \
+
+
+Machine Learning Algorithms.ipynb \
+
+
+
 
 ### Libraries
 pandas \
