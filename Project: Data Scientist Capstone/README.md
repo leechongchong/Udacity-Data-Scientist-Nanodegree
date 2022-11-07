@@ -24,11 +24,10 @@ Data Cleaning.ipynb \
 
 
 Feature Engineering.ipynb \
-
+Feature Selection.png \
 
 Machine Learning Algorithms.ipynb \
-Decision Tree.pdf \
-feature importance plot.png \
+Top 10 Features.png \
 
 
 
@@ -50,9 +49,6 @@ is a free software machine learning library for the Python programming language.
 
 xgboost \
 belongs to a family of boosting algorithms and uses the gradient boosting (GBM) framework at its core. 
-
-pydotplus \
-is an improved version of the old pydot project that provides a Python Interface to Graphviz's Dot language
 
 
 ## Results Summary
