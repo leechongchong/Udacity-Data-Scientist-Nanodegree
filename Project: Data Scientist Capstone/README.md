@@ -69,5 +69,7 @@ The technical details, main results and insights of the project can be found at 
 ## Acknowledgement
 Thank you Prof.Stephen Coggeshall, Chief Analytics and Science Officer IDA, LifeLock in sharing the data and provided guidance & instructions in general fraud analytics. 
 
+Thank you my classmates Jie Chen, Raman Deep Singh, Xiaowen Zhang, Yu Dong in brainstorming on this project together with me. 
+
 
 
