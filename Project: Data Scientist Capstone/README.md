@@ -18,7 +18,7 @@ Credit Card Payment Fraud Clean.xlsx \
 is the clean version of Credit Card Payment Fraud.xlsx after the missing values being handled. 
 
 Credit Card Payment Fraud Features.xlsx \
-is the final version of Credit Card Payment Fraud.xlsx without newly created features related to fraud detection.
+is the final version of Credit Card Payment Fraud.xlsx with newly created features related to fraud detection.
 
 DQR.ipynb \
 is the Jupyter Notebook conducting explotary data analysis on the given dataset.
