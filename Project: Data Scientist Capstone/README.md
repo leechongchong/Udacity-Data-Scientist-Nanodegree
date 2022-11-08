@@ -63,7 +63,7 @@ belongs to a family of boosting algorithms and uses the gradient boosting (GBM) 
 
 
 ## Results Summary
-The technical details, main results and insights of the project can be found at the Medium Blog post available here:
+The technical details, main results and insights of the project can be found at the Medium Blog post available here: https://medium.com/@chongli06/credit-card-fraud-detection-using-machine-learning-algorithms-69cf15f849f8
 
 
 ## Acknowledgement
