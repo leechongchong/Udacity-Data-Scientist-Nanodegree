@@ -9,9 +9,9 @@ This project aims to explore basic applications of machine learning in credit ca
 ### Files
 Credit Card Payment Fraud.xlsx \
 is a dataset provided by ID Analytics containing 95,007 records of card transaction from 2010-01-01 to 2010-12-31. It includes information about card number, date, merchant’s number, description, state, zip code, transaction type, and amount. Every record is also labeled as fraud or not. In total, there are 298 labeled fraudulent records.
-10 variables in total – 1 numeric, 7 categorical, 1 text, 1 date
-Numeric: amount
-Categorical: recordnum, cardnum, merchnum, merch.state, merch.zip, transtype, and fraud Text: merch.description
+10 variables in total – 1 numeric, 7 categorical, 1 text, 1 date \
+Numeric: amount \
+Categorical: recordnum, cardnum, merchnum, merch.state, merch.zip, transtype, and fraud Text: merch.description \
 Date: date
 
 Credit Card Payment Fraud Clean.xlsx \
@@ -69,7 +69,7 @@ The technical details, main results and insights of the project can be found at 
 ## Acknowledgement
 Thank you Prof.Stephen Coggeshall, Chief Analytics and Science Officer IDA, LifeLock in sharing the data and provided guidance & instructions in general fraud analytics. 
 
-Thank you my classmates Jie Chen, Raman Deep Singh, Xiaowen Zhang, Yu Dong in brainstorming on this project together with me. 
+Thank you my classmates Jie Chen, Raman Deep Singh, Xiaowen Zhang, Yu Dong in brainstorming and working on this project together with me. 
 
 
 
